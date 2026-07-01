@@ -18,9 +18,12 @@ app.get("/", (req, res) => {
   res.send("Placement Management Backend is running");
 });
 
-// Routes
+// ROUTES
 const authRoutes = require("./routes/auth.routes");
+const studentRoutes = require("./routes/student.routes");
+
 app.use("/api/auth", authRoutes);
+app.use("/api/student", studentRoutes);
 
 // Start server
 const PORT = process.env.PORT || 5000;
